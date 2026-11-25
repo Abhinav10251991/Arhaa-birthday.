@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light">
+<title>ArhAA turns 1 · You’re invited</title>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:light;--ink:#2f3e6b;--coral:#ff6f83;--coral2:#ff9a8b;--sky:#bfe6ff;--lilac:#d9ccff;--mint:#c9f2e0;--sun:#ffd96b;--muted:#6b7aa8;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;color:var(--ink);font-family:'Quicksand',system-ui,sans-serif;text-align:center;overflow-x:hidden;
+background:linear-gradient(180deg,#a9dcff 0%,#d9f0ff 35%,#fff0f3 70%,#fff7e6 100%);background-attachment:fixed}
+section{max-width:480px;margin:0 auto;padding:30px 20px;position:relative;z-index:2}
+.sky{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden}
+.cloud{position:absolute;background:#fff;border-radius:60px;opacity:.9;animation:drift linear infinite}
+.cloud::before,.cloud::after{content:"";position:absolute;background:#fff;border-radius:50%}
+.cloud::before{width:55%;height:150%;left:12%;top:-70%}.cloud::after{width:40%;height:120%;right:12%;top:-45%}
+@keyframes drift{from{transform:translateX(-160px)}to{transform:translateX(115vw)}}
+.bal{position:absolute;bottom:-120px;width:42px;height:54px;border-radius:50% 50% 48% 48%;animation:rise linear infinite;opacity:.85}
+.bal::after{content:"";position:absolute;left:50%;top:100%;width:2px;height:40px;background:rgba(47,62,107,.35)}
+@keyframes rise{to{transform:translateY(-130vh) translateX(var(--sw,20px))}}
+.star{position:absolute;font-size:1rem;color:#fff;animation:tw 2.2s ease-in-out infinite}
+@keyframes tw{50%{opacity:.15;transform:scale(.5) rotate(25deg)}}
+.small{letter-spacing:.22em;text-transform:uppercase;font-size:.78rem;color:var(--muted);font-weight:700}
+.name{font-family:'Pacifico',cursive;font-weight:400;font-size:4.8rem;line-height:1.15;margin:4px 0 0;color:var(--coral);text-shadow:3px 3px 0 #fff;display:flex;justify-content:center}
+.name span{display:inline-block;animation:wave 2.2s ease-in-out infinite}
+@keyframes wave{0%,60%,100%{transform:translateY(0) rotate(0)}30%{transform:translateY(-14px) rotate(-6deg)}}
+.hot{width:190px;margin:6px auto 0;animation:float 4s ease-in-out infinite;filter:drop-shadow(0 14px 12px rgba(47,62,107,.2))}
+@keyframes float{50%{transform:translateY(-16px) rotate(2deg)}}
+.tag{font-size:1.2rem;font-weight:700;margin:6px 0 0}
+.row{display:flex;gap:9px;justify-content:center;margin:16px 0 0}
+.cd div{background:#fff;border-radius:16px;padding:11px 6px;min-width:68px;box-shadow:0 8px 18px rgba(47,62,107,.15);border-bottom:4px solid var(--coral)}
+.cd b{display:block;font-size:1.6rem;color:var(--coral)}.cd span{font-size:.68rem;text-transform:uppercase;letter-spacing:.1em;color:var(--muted)}
+.cd b.pop{animation:pop .4s}@keyframes pop{50%{transform:scale(1.35)}}
+.welcome{margin:22px 2px 0;padding:18px;border-radius:22px;background:rgba(255,255,255,.85);font-size:1.05rem;line-height:1.55;box-shadow:0 8px 20px rgba(47,62,107,.1)}
+.welcome b{font-family:'Pacifico',cursive;font-weight:400;color:var(--coral);font-size:1.25rem;display:block;margin-bottom:6px}
+.card{background:#fff;border-radius:26px;padding:28px 20px 20px;box-shadow:0 12px 30px rgba(47,62,107,.15);position:relative}
+.ribbon{position:absolute;top:-16px;left:50%;transform:translateX(-50%);background:linear-gradient(160deg,var(--coral2),var(--coral));color:#fff;font-family:'Pacifico',cursive;padding:5px 24px;border-radius:999px;white-space:nowrap;box-shadow:0 5px 12px rgba(255,111,131,.4)}
+.facts p{margin:.4rem 0;font-size:1.12rem}
+.btn{display:block;text-decoration:none;border:0;cursor:pointer;font:inherit;font-weight:700;color:#fff;background:linear-gradient(160deg,var(--coral2),var(--coral));padding:14px 18px;border-radius:999px;margin:10px 0;width:100%;font-size:1rem;box-shadow:0 6px 14px rgba(255,111,131,.35);transition:transform .15s}
+.btn:active{transform:scale(.96)}
+.btn.main{animation:pulse 2s infinite}@keyframes pulse{50%{box-shadow:0 0 0 10px rgba(255,111,131,.15)}}
+.btn.alt{background:#fff;color:var(--coral);border:2px solid var(--coral);box-shadow:none}
+.tl{text-align:left;margin:8px 0 0;padding:0;list-style:none}
+.tl li{display:flex;gap:12px;align-items:center;padding:10px 0;border-bottom:2px dotted var(--sky);font-size:1.05rem}
+.tl li:last-child{border:0}.tl em{font-style:normal;font-size:1.5rem;display:inline-block;animation:bounce 2s ease-in-out infinite}
+.tl li:nth-child(2) em{animation-delay:.3s}.tl li:nth-child(3) em{animation-delay:.6s}.tl li:nth-child(4) em{animation-delay:.9s}
+@keyframes bounce{50%{transform:translateY(-6px) scale(1.15)}}
+.months{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:10px}
+.months div{border-radius:14px;padding:12px 4px;font-size:.85rem;font-weight:700;cursor:pointer;transition:.2s}
+.months div:nth-child(4n+1){background:var(--sky)}.months div:nth-child(4n+2){background:var(--lilac)}.months div:nth-child(4n+3){background:var(--mint)}.months div:nth-child(4n){background:#ffe3a8}
+.months div.on{background:var(--coral);color:#fff;transform:scale(1.08) rotate(-2deg)}
+#msg{min-height:3em;margin-top:14px;font-size:1.05rem}
+input,textarea{width:100%;padding:13px;border-radius:14px;border:2px solid var(--sky);font:inherit;background:#fff;color:var(--ink);margin:12px 0 6px}
+textarea{min-height:90px;resize:vertical}
+.guests{display:flex;gap:8px;justify-content:center;align-items:center;margin:8px 0}
+.guests button{width:42px;height:42px;border-radius:50%;border:0;background:var(--sky);color:var(--ink);font-size:1.3rem;font-weight:700;cursor:pointer}
+#pass{display:none;margin-top:16px;border-radius:20px;overflow:hidden;background:linear-gradient(160deg,#7cc4ff,#a98bff);color:#fff;text-align:left;box-shadow:0 10px 24px rgba(80,90,200,.35)}
+#pass .top{padding:16px 18px}#pass .lbl{font-size:.65rem;letter-spacing:.25em;text-transform:uppercase;opacity:.9}
+#pass .nm{font-family:'Pacifico',cursive;font-size:1.8rem;line-height:1.2}
+#pass .mid{border-top:3px dashed rgba(255,255,255,.7);padding:12px 18px;display:flex;justify-content:space-between;gap:10px;font-size:.9rem}
+.foot{padding-bottom:60px;font-weight:700}
+.rv{opacity:0;transform:translateY(34px) scale(.97);transition:opacity .7s,transform .7s}.rv.in{opacity:1;transform:none}
+.pop2{position:fixed;top:-30px;font-size:1.5rem;animation:fall linear forwards;pointer-events:none;z-index:60}
+@keyframes fall{to{transform:translateY(110vh) rotate(360deg)}}
+#intro{position:fixed;inset:0;z-index:50;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;padding:24px;background:linear-gradient(180deg,#8fd0ff,#e6f6ff 60%,#fff0f3);cursor:pointer;transition:opacity .6s,transform .6s}
+#intro .pres{letter-spacing:.3em;font-size:.75rem;text-transform:uppercase;color:var(--muted);font-weight:700;position:relative;z-index:2}
+#intro h2{font-family:'Pacifico',cursive;font-weight:400;font-size:3.8rem;margin:0;color:var(--coral);line-height:1.1;text-shadow:3px 3px 0 #fff;position:relative;z-index:2;animation:float 3s ease-in-out infinite}
+#intro .sub{font-size:1.05rem;letter-spacing:.15em;text-transform:uppercase;font-weight:700;position:relative;z-index:2}
+#intro .tap{margin-top:22px;background:var(--coral);color:#fff;padding:13px 26px;border-radius:999px;font-weight:700;animation:pulse 1.6s infinite,float 1.6s ease-in-out infinite;position:relative;z-index:2}
+@media (prefers-reduced-motion:reduce){*{animation-duration:.01s!important;animation-iteration-count:1!important}.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<div class="sky" id="sky"></div>
+<div id="intro" role="button" aria-label="Open invitation">
+  <div class="pres">A Thummala’s production</div>
+  <h2>ArhAA</h2>
+  <div class="sub">The First Birthday</div>
+  <div class="pres">Coming 27 December 🎬</div>
+  <div class="tap">Tap to open 🎈</div>
+</div>
+
+<section>
+  <div class="small">Up, up and away!</div>
+  <h1 class="name" id="title" aria-label="ArhAA"></h1>
+  <svg class="hot" viewBox="0 0 160 220" aria-hidden="true">
+    <defs><clipPath id="env"><path d="M80 6C30 6 6 50 14 88C20 112 48 134 62 150H98C112 134 140 112 146 88C154 50 130 6 80 6Z"/></clipPath></defs>
+    <g clip-path="url(#env)">
+      <rect width="160" height="160" fill="#ff9a8b"/>
+      <path d="M80 0C50 30 40 100 62 160H98C120 100 110 30 80 0Z" fill="#ffd96b"/>
+      <path d="M30 0C20 50 30 120 50 160H62C40 110 40 40 52 0Z" fill="#9ad7ff"/>
+      <path d="M130 0C140 50 130 120 110 160H98C120 110 120 40 108 0Z" fill="#c4a8ff"/>
+    </g>
+    <path d="M80 6C30 6 6 50 14 88C20 112 48 134 62 150H98C112 134 140 112 146 88C154 50 130 6 80 6Z" fill="none" stroke="#fff" stroke-width="3"/>
+    <text x="80" y="102" text-anchor="middle" font-family="Pacifico,cursive" font-size="56" fill="#fff" stroke="#ff6f83" stroke-width="2" paint-order="stroke">1</text>
+    <path d="M64 152L70 182M96 152L90 182" stroke="#8a5a3c" stroke-width="2"/>
+    <rect x="62" y="182" width="36" height="26" rx="5" fill="#c98a5a"/><path d="M62 192H98" stroke="#8a5a3c" stroke-width="2"/>
+  </svg>
+  <p class="tag">is turning ONE! 🎉</p>
+  <div class="row cd" id="cd" aria-label="Countdown"></div>
+  <div class="welcome rv"><b>Dear family &amp; friends,</b>Our little angel ArhAA is turning one, and we would love for you to share this magical day with us. Your love and blessings have made her first year so special. Come celebrate with cake, balloons and lots of laughter! 🎈<br><br>With love,<br>ArhAA’s mom &amp; dad</div>
+</section>
+
+<section>
+  <div class="card facts rv">
+    <div class="ribbon">The Details</div>
+    <p>📅 <b>Sunday, 27 December 2026</b></p>
+    <p>🕕 <b>6:00 PM</b></p>
+    <p>📍 <b>Manar Villas</b><br><span style="font-size:.95rem;color:var(--muted)">Banda Mailaram, Telangana 501401</span></p>
+    <a class="btn" id="map" target="_blank" rel="noopener">Open in Maps</a>
+    <a class="btn alt" id="cal" target="_blank" rel="noopener">Add to Calendar</a>
+  </div>
+</section>
+
+<section>
+  <div class="card rv">
+    <div class="ribbon">Party Plan</div>
+    <ul class="tl">
+      <li><em>🎈</em><span><b>6:00 PM</b> · Arrival &amp; welcome</span></li>
+      <li><em>📸</em><span>Photos with the birthday girl</span></li>
+      <li><em>🎂</em><span>Cake cutting</span></li>
+      <li><em>🍽️</em><span>Dinner, music &amp; dancing</span></li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <div class="card rv">
+    <div class="ribbon">ArhAA’s First Year</div>
+    <p class="small" style="margin:6px 0 0">Tap a month</p>
+    <div class="months" id="months"></div>
+    <div id="msg">A little angel, a lot of love. 💕</div>
+  </div>
+</section>
+
+<section>
+  <div class="card rv">
+    <div class="ribbon">Will you come?</div>
+    <input id="name" placeholder="Your name" autocomplete="name">
+    <div class="guests"><button id="minus" aria-label="Fewer">−</button><b id="n" style="font-size:1.2rem;min-width:110px">2 guests</b><button id="plus" aria-label="More">+</button></div>
+    <a class="btn main" id="yes" target="_blank" rel="noopener">Yes, we’ll be there! 🎉</a>
+    <a class="btn alt" id="no" target="_blank" rel="noopener">Sorry, can’t make it</a>
+    <button class="btn alt" id="passbtn" type="button">Get my VIP pass 🎟️</button>
+    <div id="pass">
+      <div class="top"><div class="lbl">VIP guest pass</div><div class="nm" id="pname"></div><div class="lbl" style="margin-top:4px">ArhAA’s 1st Birthday</div></div>
+      <div class="mid"><span>27 Dec 2026<br>6:00 PM</span><span>Manar Villas<br>Banda Mailaram</span><span style="text-align:right"><b id="pguests"></b><br>Screenshot me 💖</span></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="card rv">
+    <div class="ribbon">Wishes for ArhAA</div>
+    <p style="margin:6px 0 0">Can’t wait to hear your blessings! 💌</p>
+    <input id="wname" placeholder="Your name">
+    <textarea id="wish" placeholder="Write a little wish for ArhAA…"></textarea>
+    <a class="btn" id="wishbtn" target="_blank" rel="noopener">Send my wish 💖</a>
+  </div>
+</section>
+
+<section class="foot rv">🎈 With love, ArhAA’s mom &amp; dad 🎈</section>
+
+<script>
+(function(){
+  var PHONE="919963930280";
+  var EVENT=new Date("2026-12-27T18:00:00+05:30");
+  function $(i){return document.getElementById(i)}
+  function R(a,b){return a+Math.random()*(b-a)}
+
+  // Animated sky: clouds, balloons, stars
+  var sky=$("sky"),cols=["#ff9a8b","#ffd96b","#9ad7ff","#c4a8ff","#8ee3c0","#ff8fb8"],h="";
+  for(var i=0;i<5;i++)h+='<div class="cloud" style="width:'+R(90,150)+'px;height:'+R(26,38)+'px;top:'+R(4,70)+'vh;animation-duration:'+R(45,90)+'s;animation-delay:-'+R(0,60)+'s"></div>';
+  for(i=0;i<9;i++)h+='<div class="bal" style="left:'+R(2,94)+'vw;background:'+cols[i%6]+';--sw:'+R(-40,40)+'px;animation-duration:'+R(14,26)+'s;animation-delay:-'+R(0,20)+'s"></div>';
+  for(i=0;i<10;i++)h+='<div class="star" style="left:'+R(2,96)+'vw;top:'+R(2,60)+'vh;animation-delay:'+R(0,2)+'s">✦</div>';
+  sky.innerHTML=h;
+
+  // Wavy title
+  var t=$("title");"ArhAA".split("").forEach(function(c,i){var s=document.createElement("span");s.textContent=c;s.style.animationDelay=(i*.15)+"s";t.appendChild(s)});
+
+  // Scroll reveal
+  var rv=[].slice.call(document.querySelectorAll(".rv"));
+  if("IntersectionObserver" in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}})},{threshold:.12});
+    rv.forEach(function(e){io.observe(e)});
+  }else rv.forEach(function(e){e.classList.add("in")});
+
+  // Countdown
+  var last=-1;
+  function tick(){
+    var d=EVENT-new Date();
+    if(d<=0){$("cd").innerHTML="<div style='min-width:200px'><b>Party time! 🎉</b></div>";return}
+    var s=Math.floor(d/1000),v=[["Days",Math.floor(s/86400)],["Hrs",Math.floor(s%86400/3600)],["Min",Math.floor(s%3600/60)],["Sec",s%60]];
+    $("cd").innerHTML=v.map(function(x,i){return "<div><b"+(i==3?' class="pop"':'')+">"+x[1]+"</b><span>"+x[0]+"</span></div>"}).join("");
+  }
+  tick();setInterval(tick,1000);
+
+  $("map").href="https://www.google.com/maps/search/?api=1&query="+encodeURIComponent("MGP2+CV Banda Mailaram, Telangana 501401");
+  $("cal").href="https://calendar.google.com/calendar/render?action=TEMPLATE&text="+encodeURIComponent("ArhAA’s 1st Birthday")+
+    "&dates=20261227T123000Z/20261227T160000Z&location="+encodeURIComponent("Manar Villas, Banda Mailaram, Telangana 501401");
+
+  var notes=["Hello, world! 👶","First smiles 😊","Little giggles 🥰","Rolling over 🌀","Tiny hands grabbing everything ✋","Sitting up like a queen 👑","First tastes of food 🍌","Crawling champion 🐾","Pulling up to stand 💪","Waving hi & bye 👋","Wobbly first steps 👣","One whole year! 🎂"];
+  var m=$("months");
+  notes.forEach(function(x,i){
+    var e=document.createElement("div");e.textContent="Month "+(i+1);
+    e.onclick=function(){
+      [].forEach.call(m.children,function(c){c.classList.remove("on")});
+      e.classList.add("on");$("msg").textContent="Month "+(i+1)+": "+x;confetti();
+    };
+    m.appendChild(e);
+  });
+
+  var n=2;
+  function show(){$("n").textContent=n+(n===1?" guest":" guests")}
+  $("minus").onclick=function(){if(n>1){n--;show()}};
+  $("plus").onclick=function(){if(n<10){n++;show()}};
+  function wa(x){return "https://wa.me/"+PHONE+"?text="+encodeURIComponent(x)}
+  function upd(){
+    var nm=$("name").value.trim()||"A friend";
+    $("yes").href=wa("Hi! "+nm+" here. We’ll be there for ArhAA’s 1st birthday on 27 Dec at 6 PM. Guests: "+n+" 🎉💖");
+    $("no").href=wa("Hi! "+nm+" here. Sorry, we can’t make it to ArhAA’s birthday, but sending lots of love 💖");
+  }
+  ["name","minus","plus"].forEach(function(i){$(i).addEventListener(i==="name"?"input":"click",upd)});
+  upd();$("yes").addEventListener("click",confetti);
+
+  $("intro").onclick=function(){var x=this;x.style.opacity=0;x.style.transform="scale(1.15)";setTimeout(function(){x.style.display="none";confetti()},600)};
+  $("passbtn").onclick=function(){
+    var nm=$("name").value.trim();
+    if(!nm){$("name").focus();$("name").placeholder="Type your name first 💖";return}
+    $("pname").textContent=nm;$("pguests").textContent=n+(n===1?" guest":" guests");
+    $("pass").style.display="block";$("pass").scrollIntoView({behavior:"smooth",block:"center"});confetti();
+  };
+  function updW(){
+    var nm=$("wname").value.trim()||"A friend",w=$("wish").value.trim()||"Happy 1st birthday, ArhAA! 💖";
+    $("wishbtn").href=wa("Wish for ArhAA from "+nm+": "+w);
+  }
+  $("wname").addEventListener("input",updW);$("wish").addEventListener("input",updW);updW();
+
+  function confetti(){
+    var em=["🎈","🎉","✨","💖","⭐","🎀"];
+    for(var i=0;i<26;i++){
+      var p=document.createElement("div");p.className="pop2";p.textContent=em[i%em.length];
+      p.style.left=Math.random()*100+"vw";p.style.animationDuration=(2+Math.random()*2)+"s";p.style.animationDelay=(Math.random()*.6)+"s";
+      document.body.appendChild(p);setTimeout(function(x){x.remove()},4800,p);
+    }
+  }
+})();
+</script>
+</body>
+</html>
